@@ -114,7 +114,6 @@ export default getClientInfo => {
         .map((asset, i) => <script key={i} type='text/javascript' src={`${asset}`} />)
 
       try {
-        console.log(store)
         content = renderToString(
           <AppContainer
             history={history}

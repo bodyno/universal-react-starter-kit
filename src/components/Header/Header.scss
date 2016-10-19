@@ -1,4 +1,9 @@
+.menu {
+  a {
+    color: cadetblue;
+  }
+}
 .activeRoute {
   font-weight: bold;
-  text-decoration: underline;
+  text-decoration: none;
 }

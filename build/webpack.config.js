@@ -29,27 +29,24 @@ webpackConfig.plugins = [
 // Pre-Loaders
 // ------------------------------------
 /*
-[ NOTE ]
-We no longer use eslint-loader due to it severely impacting build
-times for larger projects. `npm run lint` still exists to aid in
-deploy processes (such as with CI), and it's recommended that you
-use a linting plugin for your IDE in place of this loader.
-
-If you do wish to continue using the loader, you can uncomment
-the code below and run `npm i --save-dev eslint-loader`. This code
-will be removed in a future release.
-
-webpackConfig.module.preLoaders = [{
-  test: /\.(js|jsx)$/,
-  loader: 'eslint',
-  exclude: /node_modules/
-}]
-
-webpackConfig.eslint = {
-  configFile: paths.base('.eslintrc'),
-  emitWarning: __DEV__
-}
-*/
+ [ NOTE ]
+ We no longer use eslint-loader due to it severely impacting build
+ times for larger projects. `npm run lint` still exists to aid in
+ deploy processes (such as with CI), and it's recommended that you
+ use a linting plugin for your IDE in place of this loader.
+ If you do wish to continue using the loader, you can uncomment
+ the code below and run `npm i --save-dev eslint-loader`. This code
+ will be removed in a future release.
+ webpackConfig.module.preLoaders = [{
+ test: /\.(js|jsx)$/,
+ loader: 'eslint',
+ exclude: /node_modules/
+ }]
+ webpackConfig.eslint = {
+ configFile: paths.base('.eslintrc'),
+ emitWarning: __DEV__
+ }
+ */
 
 // ------------------------------------
 // Loaders
@@ -65,10 +62,10 @@ webpackConfig.module.loaders = [{
     presets: ['es2015', 'react', 'stage-0']
   }
 },
-{
-  test: /\.json$/,
-  loader: 'json'
-}]
+  {
+    test: /\.json$/,
+    loader: 'json'
+  }]
 
 // ------------------------------------
 // Style Loaders
@@ -89,33 +86,40 @@ if (config.compiler_css_modules) {
     paths.src().replace(/[\^\$\.\*\+\-\?\=\!\:\|\\\/\(\)\[\]\{\}\,]/g, '\\$&') // eslint-disable-line
   )
 }
-const cssModulesLoader = [
-  BASE_CSS_LOADER,
-  'modules',
-  'importLoaders=1',
-  'localIdentName=[name]__[local]___[hash:base64:5]'
-].join('&')
 
-webpackConfig.module.loaders.push({
-  test: /\.scss$/,
-  include: cssModulesRegex,
-  loaders: [
-    'simple-universal-style',
-    cssModulesLoader,
-    'postcss',
-    'sass?sourceMap'
-  ]
-})
+const isUsingCSSModules = false
+const cssModulesRegex = new RegExp(`(${PATHS_TO_TREAT_AS_CSS_MODULES.join('|')})`)
 
-webpackConfig.module.loaders.push({
-  test: /\.css$/,
-  include: cssModulesRegex,
-  loaders: [
-    'simple-universal-style',
-    cssModulesLoader,
-    'postcss'
-  ]
-})
+// Loaders for styles that need to be treated as CSS modules.
+if (isUsingCSSModules) {
+  const cssModulesLoader = [
+    BASE_CSS_LOADER,
+    'modules',
+    'importLoaders=1',
+    'localIdentName=[name]__[local]___[hash:base64:5]'
+  ].join('&')
+
+  webpackConfig.module.loaders.push({
+    test: /\.scss$/,
+    include: cssModulesRegex,
+    loaders: [
+      'simple-universal-style',
+      cssModulesLoader,
+      'postcss',
+      'sass?sourceMap'
+    ]
+  })
+
+  webpackConfig.module.loaders.push({
+    test: /\.css$/,
+    include: cssModulesRegex,
+    loaders: [
+      'simple-universal-style',
+      cssModulesLoader,
+      'postcss'
+    ]
+  })
+}
 
 // Loaders for files that should not be treated as CSS modules.
 const excludeCSSModules = isUsingCSSModules ? cssModulesRegex : false
