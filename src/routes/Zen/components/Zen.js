@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Helmet from 'react-helmet'
 import './Zen.scss'
 
 export default class Zen extends Component {
@@ -20,6 +21,7 @@ export default class Zen extends Component {
 
     return (
       <div>
+        <Helmet title='Zen' />
         <div>
           <button className='btn btn-default' onClick={fetchZen}>
             {fetching ? 'Fetching...' : 'Fetch'}
