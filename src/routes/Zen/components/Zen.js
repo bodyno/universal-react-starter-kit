@@ -3,7 +3,7 @@ import './Zen.scss'
 
 export default class Zen extends Component {
 
-  componentWillMount () {
+  componentDidMount () {
     if (this.props.zen.text.length) return
     this.props.fetchZen()
   }
