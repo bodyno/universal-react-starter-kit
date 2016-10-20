@@ -5,7 +5,7 @@ import { routerReducer as router } from 'react-router-redux'
 // http://stackoverflow.com/a/33678198/789076
 const initialReducers = {
   counter: (state = 0) => state,
-  zen: (state = 0) => state
+  zen: (state = require('../routes/Zen/modules/zen').initialState) => state
 }
 
 export const makeRootReducer = (asyncReducers) => {
