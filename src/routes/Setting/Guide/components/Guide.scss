@@ -1,0 +1,63 @@
+$bdColor: #e5e5e5;
+$shadow: 0 0 6px rgba(48,42,37,0.3);
+$radius: 3px;
+$color: #333;
+$color8D: #8d8d8d;
+$color7C: #7c7c7c;
+$green: #64cc40;
+$font14: 14px;
+@mixin shadow($shadow) {
+  box-shadow: $shadow;
+}
+@mixin radius($radius) {
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+  border-radius:$radius;
+}
+.guide-box {
+  @include shadow($shadow);
+  @include radius($radius);
+  height: 998px;
+  padding: 18px;
+  background-color: #fff;
+  .ant-card {
+    float: left;
+    margin: 6px;
+    cursor: pointer;
+  }
+  .ant-card-body {
+    padding: 18px;
+  }
+  .custom-image  {
+    position: relative;
+  }
+  .custom-image img {
+    width: 258px;
+    height: 144px;
+  }
+  .custom-image .time {
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    padding: 3px 5px;
+    color: #fff;
+    background-color: rgba(0,0,0,0.8);
+  }
+  .custom-card {
+    h3 {
+      margin: 7px 0 7px 0;
+      font-weight: 500;
+    }
+    p {
+      color: $color7C;
+    }
+  }
+}
+.guide-modal {
+  .ant-modal-body {
+    padding: 16px;
+  }
+  video {
+    width: 100%;
+  }
+}

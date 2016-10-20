@@ -1,0 +1,58 @@
+.btn {
+  padding: 5px 24px 4px !important;
+  border-radius: 3px !important;
+  font-size: 14px !important;
+}
+.btn.green {
+  background-color: #35d672;
+  border-color: #35d672;
+
+  &:hover, &:focus {
+    background-color: #3fb76c;
+    border-color: #3fb76c;
+  }
+
+  &:after {
+    border: 0 solid #35d672;
+  }
+}
+.btn.orange {
+  background-color: #fabe1d;
+  border-color: #fabe1d;
+
+  &:hover, &:focus {
+    background-color: #FAD95B;
+    border-color: #FAD95B;
+  }
+
+  &:after {
+    border: 0 solid #fabe1d;
+  }
+}
+.btn.blue {
+  background-color: #00b9fb;
+  border-color: #00b9fb;
+
+  &:hover, &:focus {
+    background-color: #31D3FB;
+    border-color: #31D3FB;
+  }
+
+  &:after {
+    border: 0 solid #00b9fb;
+  }
+}
+.btn.gray {
+  background-color: #fff;
+  color: #686868;
+  border-color: #e7e7ec;
+
+  &:hover, &:focus {
+    background-color: #686868;
+    border-color: #686868;
+  }
+
+  &:after {
+    border: 0 solid #686868;
+  }
+}

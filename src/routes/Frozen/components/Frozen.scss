@@ -1,0 +1,54 @@
+.frozen-con {
+  margin: 0 auto;
+  width: 1000px;
+
+  .content {
+    border: 1px solid #d5d5d5;
+    margin-top: 63px;
+    margin-bottom: 57px;
+
+    .inner {
+      width: 320px;
+      margin: 0 auto;
+      text-align: center;
+
+      img {
+        margin-top: 115px;
+      }
+      .text1 {
+        font-size: 24px;
+        color: #8d8d8d;
+        margin-top: 15px;
+      }
+      .text2 {
+        font-size: 16px;
+        margin-bottom: 46px;
+        margin-top: 6px;
+      }
+      .qq-con {
+        width: 230px;
+        margin: 0 auto;
+      }
+      .qq {
+        font-size: 16px;
+        color: #ffffff;
+        margin-bottom: 18px;
+        background: #33c7fc url("../assets/qq.png") no-repeat 70px 9px;
+        border-radius: 5px;
+        height: 35px;
+        line-height: 35px;
+        cursor: pointer;
+        text-indent: 20px;
+        transition: .3s;
+
+        &:hover {
+          background: #81deff url("../assets/qq.png") no-repeat 70px 9px;
+        }
+      }
+      .phone {
+        margin-bottom: 197px;
+      }
+    }
+  }
+
+}

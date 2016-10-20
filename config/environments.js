@@ -11,10 +11,10 @@ export default {
   development: (config) => ({
     compiler_public_path: `http://${config.server_host}:${config.server_port}/`,
     proxy: {
-      enabled: false,
+      enabled: true,
       options: {
-        host: 'http://localhost:8000',
-        match: /^\/api\/.*/
+        host: 'https://shopdev.baobaobooks.net/',
+        match: /^\/restapi\/.*/
       }
     }
   }),

@@ -1,0 +1,183 @@
+.mask-withdraw {
+  width: 522px;
+  height: 500px;
+  margin-left: -261px;
+  margin-top: -250px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: #fff;
+  border-radius: 5px;
+  z-index: 1001;
+
+  .title {
+    height: 50px;
+    border-bottom: 1px solid #e7e7eb;
+    line-height: 50px;
+
+    .text {
+      color: #333333;
+      padding-left: 17px;
+    }
+  }
+
+  .close-con {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: #9a9a9a;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    font-weight: 700;
+
+    &:hover {
+      color: #000;
+    }
+  }
+  .not-enough {
+    background: url("./asserts/not_enough.png") no-repeat;
+    width: 511px;
+    height: 383px;
+    margin: 0 auto;
+
+    .text-con {
+      text-align: center;
+      padding-top: 246px;
+    }
+    .text {
+      border-top: 1px solid #fcd0c4;
+      border-bottom: 1px solid #fcd0c4;
+      line-height: 1;
+      padding: 16px 0;
+      display: inline-block;
+    }
+  }
+
+  .cant {
+    .cant-img {
+      background: url("./asserts/cant.png") no-repeat;
+      width: 155px;
+      height: 144px;
+      margin: 52px 0 20px 203px;
+    }
+    .text {
+      text-align: center;
+    }
+    .center {
+      margin-top: 30px;
+      text-align: center;
+    }
+  }
+
+  .done {
+    text-align: center;
+
+    .done-img {
+      background: url("./asserts/time.png") no-repeat;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      margin-top: 96px;
+    }
+
+    .text {
+      font-size: 18px;
+      margin: 30px 0;
+    }
+
+  }
+
+  .form {
+    padding-top: 30px;
+    line-height: 1;
+
+    .group {
+      overflow: hidden;
+      height: 44px;
+      line-height: 44px;
+    }
+    .text {
+      float: left;
+      width: 130px;
+      text-align: right;
+    }
+    .value {
+      float: left;
+      width: 390px;
+      padding-left: 10px;
+    }
+    .ml {
+      margin-left: 8px;
+    }
+    .edit, .edit2 {
+      color: #00bafc;
+      margin-left:30px;
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .edit2 {
+      margin-left:10px;
+    }
+    .group-text {
+      font-size: 12px;
+      color: #8d8d8d;
+      padding-left: 140px;
+      height: 23px;
+      line-height: 23px;
+    }
+    .code {
+      margin-left: 14px;
+      position: relative;
+      top: -1px;
+      cursor: pointer;
+    }
+    .red {
+      color: #ff596c;
+    }
+    .btn-group {
+      border-top: 1px solid #e7e7eb;
+      padding-top: 10px;
+      margin-top: 36px;
+      padding-right: 20px;
+
+      .btn {
+        float: right;
+        padding: 5px 14px 4px!important;
+      }
+      .white {
+        background: #ffffff;
+        color: #333333;
+        border: 1px solid #e7e7eb;
+        border-radius: 3px;
+        margin-right: 11px;
+      }
+    }
+    .zhifubao {
+      background: url("./asserts/zhifubao.png") no-repeat;
+      width: 28px;
+      height: 28px;
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: -9px;
+    }
+
+    input {
+      border: 1px solid #e7e7eb;
+      border-radius: 3px;
+      padding: 0 8px;
+      height: 32px;
+      line-height: 32px;
+    }
+  }
+  .value-change {
+    display: none;
+  }
+  .long-width {
+    width: 250px;
+  }
+}

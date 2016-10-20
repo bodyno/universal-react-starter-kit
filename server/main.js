@@ -91,6 +91,7 @@ export default async () => {
 
   if (config.universal && config.universal.enabled) {
     let um = await universalMiddleware()
+    console.log(um);
     app.use(um.default(() => clientInfo))
   }
 

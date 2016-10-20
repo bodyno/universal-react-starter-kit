@@ -1,0 +1,27 @@
+.tab-con {
+  border-bottom: 1px solid #dbdbdb;
+  margin-bottom: 24px;
+}
+
+.tab {
+  color: #8d8d8d;
+  font-size: 14px;
+  float: left;
+  padding: 20px 12px 17px;
+  border-bottom: 2px solid transparent;
+  position: relative;
+  top: 1px;
+  z-index: 1;
+
+  &:hover {
+    border-bottom-color: #00b9fb;
+    color: #333;
+  }
+}
+
+.tab-active {
+  & .tab {
+    color: #333;
+    border-bottom-color: #00b9fb;
+  }
+}

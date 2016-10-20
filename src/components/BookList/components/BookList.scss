@@ -1,0 +1,26 @@
+.books-search {
+  margin-bottom: 27px;
+}
+.books-top {
+  margin-bottom: 26px;
+}
+.book-link {
+  text-decoration: none !important;
+}
+.books-table {
+  .book-name {
+    margin-top: 2px;
+    color: #8d8d8d;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    width: 200px;
+  }
+  .book-image {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

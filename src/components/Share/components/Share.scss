@@ -1,0 +1,230 @@
+.modal-con {
+  position: fixed;
+  z-index: 1001;
+  left: 50%;
+  top: 50%;
+  margin-left: -265px;
+  margin-top: -240px;
+  width: 530px;
+  height: 480px;
+  background: #fff;
+  border-radius: 10px;
+  text-align: center;
+  animation: scale .2s;
+
+  .close-con {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #9a9a9a;
+    text-align: center;
+    line-height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+      color: #000;
+    }
+  }
+
+  .title {
+    font-size: 18px;
+    padding-top: 56px;
+  }
+  .title-sub {
+    color: #8d8d8d;
+    margin-top: 8px;
+  }
+  .image {
+    margin-top: 10px;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+    span {
+      color: #8d8d8d;
+      font-size: 12px;
+      display: block;
+      margin-bottom: 16px;
+      margin-top: 6px;
+      cursor: pointer;
+      height: 18px;
+
+      &:hover {
+        color: #2baee9;
+      }
+    }
+  }
+  .share-icon {
+    font-size: 26px;
+    color: #fff;
+
+    .iconfont {
+      border-radius: 50%;
+      width: 46px;
+      height: 46px;
+      line-height: 46px;
+      display: inline-block;
+      cursor: pointer;
+      margin-right: 20px;
+      box-shadow: 1px 1px 4px rgba(0,0,0,.2);
+      transition: .3s;
+    }
+    .icon-weixin {
+      background: #00b935;
+      &:hover {
+        background: #33c75d;
+      }
+    }
+    .icon-qq {
+      background: #48afff;
+      &:hover {
+        background: #6dbfff;
+      }
+      &:before {
+        position: relative;
+        top: -2px;
+      }
+    }
+    .icon-weibo {
+      background: #f24a39;
+      &:hover {
+        background: #f56e61;
+      }
+      &:before {
+        position: relative;
+        top: -2px;
+        left: 2px;
+      }
+    }
+    .icon-qqkongjian {
+      background: #ffc333;
+      &:hover {
+        background: #ffcf5c;
+      }
+      &:before {
+        position: relative;
+        left: 1px;
+      }
+    }
+  }
+
+  .header {
+    padding: 14px;
+    border-bottom: 1px solid #e7e7eb;
+
+    .header-title {
+      text-align: left;
+    }
+  }
+  .more-table-con {
+    margin: 41px 38px;
+    border-left: 1px solid #e7e7eb;
+    border-right: 1px solid #e7e7eb;
+  }
+  .footer {
+    padding-top: 14px;
+    padding-bottom: 10px;
+    border-top: 1px solid #e7e7eb;
+  }
+}
+.modal-more-con {
+  width: 655px;
+  margin-left: -327px;
+  height: 466px;
+}
+.more-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th {
+    background: #f7f7f7;
+    text-align: center;
+    color: #8d8d8d;
+    padding: 16px;
+    line-height: 1;
+    font-weight: normal;
+  }
+  td {
+    padding: 14px;
+    line-height: 1;
+    .iconfont {
+      color: #9b9b9b;
+      font-size: 16px;
+      cursor: pointer;
+
+      &:hover {
+        color: #2db7f5;
+      }
+    }
+  }
+  th, td {
+    border-top: 1px solid #e7e7eb;
+    border-bottom: 1px solid #e7e7eb;
+  }
+}
+.modal-con-piece {
+  background: #fff url("../assets/pieces.png") no-repeat 73px 10px;
+}
+.share-text {
+  color: #8d8d8d;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.share-copy {
+  color: #000000;
+  border: 1px solid #e7e7ec;
+  border-radius: 3px;
+  padding: 8px;
+  display: block;
+  line-height: 1;
+  width: 380px;
+  margin: 0 auto;
+  position: relative;
+  text-align: left;
+  padding-right: 35px;
+
+  .iconfont {
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    color: #9b9b9b;
+    font-size: 18px;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      color: #333;
+    }
+  }
+}
+.share-pop {
+  .ant-popover-inner {
+    min-width: 10px;
+  }
+  .ant-popover-inner {
+    border: none;
+  }
+  .ant-popover-arrow {
+    border-bottom-color: rgba(0,0,0,.9);
+    &:after {
+      border-bottom-color: rgba(0,0,0,.9);
+    }
+  }
+  .ant-popover-inner-content {
+    background: rgba(0,0,0,.9);
+    color: #fff;
+    border-radius: 3px;
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

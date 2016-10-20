@@ -93,6 +93,7 @@
   "author": "Istvan Jano <janoist1@gmail.com> *universal feature",
   "license": "MIT",
   "dependencies": {
+    "animated-scrollto": "^1.1.0",
     "axios": "^0.15.2",
     "babel-cli": "^6.5.1",
     "babel-core": "^6.3.17",
@@ -123,6 +124,7 @@
     "koa-convert": "^1.2.0",
     "koa-proxy": "^0.6.0",
     "koa-static": "^3.0.0",
+    "lodash": "^4.16.4",
     "node-sass": "^3.8.0",
     "normalize.css": "^4.2.0",
     "postcss-loader": "^0.9.1",
@@ -136,6 +138,7 @@
     "react-styling": "^1.5.0",
     "redux": "^3.5.2",
     "redux-thunk": "^2.1.0",
+    "reselect": "^2.5.4",
     "rimraf": "^2.5.1",
     "sass-loader": "^4.0.0",
     "simple-universal-style-loader": "^0.14.3",

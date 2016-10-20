@@ -1,0 +1,188 @@
+$bdColor: #e5e5e5;
+$shadow: 0 0 6px rgba(48,42,37,0.3);
+$radius: 3px;
+$color: #333;
+$color8D: #8d8d8d;
+$color7C: #7c7c7c;
+$green: #64cc40;
+$font14: 14px;
+$blue: #2db7f5;
+@mixin shadow($shadow) {
+  box-shadow: $shadow;
+}
+@mixin radius($radius) {
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+  border-radius:$radius;
+}
+.color8d {
+  color: $color8D;
+}
+.table-con {
+  background: #ffffff;
+  box-shadow: 0 0 3px rgba(0,0,0,.1);
+  border-radius: 5px;
+  padding: 16px 20px;
+}
+.order-search {
+  margin-bottom: 15px;
+}
+.order-export {
+  font-size: 14px;
+  color: #00b9fb;
+  float: right;
+  margin-top: 6px;
+  cursor: pointer;
+
+  &:hover {
+    color: #34a4cc;
+  }
+}
+.order-img {
+  float: left;
+  width: 32%;
+  max-width: 66px;
+  margin-right: 14px;
+}
+.order-name {
+  float: left;
+  width: 135px;
+  height: 40px;
+  line-height: 20px;
+  color: $color8D;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.ant-table .more-tr td {
+  padding: 15px 8px;
+  text-align: center;
+  a {
+    color: $color8D;
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+.order-table {
+  overflow: visible;
+  table {
+    overflow: visible;
+  }
+  &.ant-table {
+    color: $color;
+  }
+  .order-item {
+    margin-top: 6px;
+  }
+  .order-top {
+    background: #f4f4f4;
+    border: 1px solid #e7e7ec;
+    border-bottom: none;
+    padding: 16px;
+    font-size: 14px;
+
+    & .time {
+      margin-right: 32px;
+    }
+  }
+  tr {
+    &:hover {
+      background: #fff !important;
+    }
+  }
+  th {
+    padding: 14px 18px;
+  }
+  .reward {
+    color: $color;
+    &:hover {
+      color: $blue;
+      * {
+        color: $blue;
+      }
+    }
+    .anticon-down {
+      margin-left: 5px;
+      font-size: 10px;
+    }
+  }
+  .detail-tips {
+    &:hover {
+      .reward {
+        color: $blue;
+        span {
+          color: $blue;
+        }
+      }
+    }
+    .box {
+      color: $color;
+    }
+  }
+  .goods-list table tr td {
+    border-bottom: 1px solid #e7e7ec !important;
+  }
+  .goods-list table:last-child tr td {
+    border-bottom: none !important;
+  }
+}
+.order-tr {
+  td {
+    padding: 14px 18px;
+    vertical-align: top;
+  }
+}
+.bl {
+  border-left: 1px solid #e7e7ec;
+}
+.bb {
+  border-bottom: 1px solid #e7e7ec;
+}
+.br {
+  border-right: 1px solid #e7e7ec;
+}
+.order-pagination {
+  margin-top: 20px;
+  float: right;
+}
+.order-search-input {
+  margin-right: 19px;
+  display: inline-block;
+  position: relative;
+  top: -1px;
+}
+.detail-tips {
+  position: relative;
+  padding-bottom: 30px;
+  &:hover {
+    .box {
+      display: block;
+    }
+  }
+  .box {
+    display: none;
+    position: absolute;
+    top: 26px;
+    right: -10px;
+    z-index: 2;
+    width: 330px;
+    padding: 12px 0 15px 0;
+    background-color: #fff;
+    @include shadow($shadow);
+    @include radius(6px);
+    .ant-table th,
+    .ant-table td {
+      padding: 10px;
+      text-align: center;
+      border: none;
+      background: none;
+    }
+  }
+  .ant-table-body {
+    border: none;
+  }
+}

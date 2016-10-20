@@ -1,0 +1,150 @@
+.s-title {
+  font-size: 14px;
+  padding-top: 20px;
+}
+.statistic-con {
+  display: flex;
+  background: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgba(0,0,0,.1);
+}
+.statistic-item {
+  flex: 1;
+  text-align: center;
+  padding: 24px 0;
+  position: relative;
+  cursor: pointer;
+  transition: .3s;
+  color: #8d8d8d;
+
+  &:not(.not):hover {
+    background: #35d672;
+    color: #fff;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    right: 0;
+    height: 54px;
+    border-right: 1px solid #e7e7eb;
+  }
+
+  & em {
+    font-size: 26px;
+    display: block;
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  & strong {
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+
+  &.not {
+    cursor: default;
+
+    & em {
+      color: #8d8d8d;
+    }
+
+    & strong {
+      color: #8d8d8d;
+    }
+  }
+}
+.trend-con {
+  background: #ffffff;
+  border-radius: 3px;
+  box-shadow: 0 0 1px rgba(0,0,0,.1);
+  padding: 25px;
+}
+.chart-con {
+  height: 240px;
+  margin-top: 20px;
+}
+.trend-option {
+  color: #8c8c8c;
+  font-size: 14px;
+  border: 1px solid #ebebeb;
+  padding: 4px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-right: 6px;
+  cursor: pointer;
+
+  &.active {
+    border-color: #00b9fb;
+    color: #00b9fb;
+  }
+}
+.statistic-foot {
+  margin-top: 20px;
+  margin-bottom: 35px;
+  font-size: 14px;
+}
+.statistic-foot-item {
+  display: inline-block;
+  font-size: 14px;
+  margin-right: 70px;
+  position: relative;
+  padding-left: 23px;
+
+  &:after {
+    content: '';
+    width: 18px;
+    height: 14px;
+    position: absolute;
+    left: 0;
+    top: 7px;
+    border-radius: 10px;
+  }
+
+  & label {
+    margin-right: 12px;
+  }
+
+  & span {
+    font-size: 18px;
+  }
+
+  &.grey-c {
+    color: #8d8d8d;
+
+    &:after {
+      background: #cccccc;
+    }
+  }
+
+  &.blue-c {
+    &:after {
+      background: #00b9fb;
+    }
+  }
+
+  &.green-c {
+    &:after {
+      background: #00d690;
+    }
+  }
+
+  &.orange-c:after {
+    background: #fa8f1d;
+  }
+
+  &.red-c:after {
+    background: #ff596c;
+  }
+
+  &.purple-c:after {
+    background: #6589e0;
+  }
+}

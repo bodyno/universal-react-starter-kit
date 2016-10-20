@@ -1,38 +1,45 @@
-// We only need to import the modules necessary for initial render
-import CoreLayout from '../layouts/CoreLayout/CoreLayout'
+// 只需要导入必要的模块在初始化加载
+import CoreLayout from '../layouts/CoreLayout'
 import Home from './Home'
-import CounterRoute from './Counter'
-import Zen from './Zen'
-
-/*  Note: Instead of using JSX, we recommend using react-router
-    PlainRoute objects to build route definitions.   */
+import Statistic from './Statistic'
+import Reward from './Reward'
+import OrdersDetail from './OrdersDetail'
+import Orders from './Orders'
+import Books from './Books'
+import Apply from './Apply'
+import Group from './Group'
+import Generalize from './Generalize'
+import Family from './Family'
+import Custom from './Custom'
+import Notifications from './Notifications'
+import Setting from './Setting'
+import Frozen from './Frozen'
+import Agreement from './Agreement'
+import PageNotFound from './PageNotFound'
+import Redirect from './PageNotFound/redirect'
 
 export const createRoutes = (store) => ({
   path: '/',
   component: CoreLayout,
-  indexRoute: Home,
+  indexRoute: Home(store),
   childRoutes: [
-    CounterRoute(store),
-    Zen(store)
+    Reward(store),
+    Statistic(store),
+    OrdersDetail(store),
+    Orders(store),
+    Books(store),
+    Apply(store),
+    Group(store),
+    Generalize(store),
+    Family(store),
+    Custom(store),
+    Notifications(store),
+    Setting(store),
+    Frozen(store),
+    Agreement(store),
+    PageNotFound(),
+    Redirect
   ]
 })
-
-/*  Note: childRoutes can be chunked or otherwise loaded programmatically
-    using getChildRoutes with the following signature:
-
-    getChildRoutes (location, cb) {
-      require.ensure([], (require) => {
-        cb(null, [
-          // Remove imports!
-          require('./Counter').default(store)
-        ])
-      })
-    }
-
-    However, this is not necessary for code-splitting! It simply provides
-    an API for async route definitions. Your code splitting should occur
-    inside the route `getComponent` function, since it is only invoked
-    when the route exists and matches.
-*/
 
 export default createRoutes

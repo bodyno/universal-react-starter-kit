@@ -1,0 +1,36 @@
+.family-time {
+  margin-right: 13px;
+  display: inline-block;
+}
+.family-top {
+  margin-bottom: 17px;
+}
+.fix-position {
+  position: relative;
+  display: inline-block;
+  top: -2px;
+}
+.family-none {
+  width: 343px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 70px;
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .title {
+    margin-top: 20px;
+  }
+
+  .text {
+    color: #8d8d8d;
+    font-size: 12px;
+  }
+
+  .btn {
+    margin-top: 30px;
+  }
+}

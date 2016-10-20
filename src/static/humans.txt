@@ -1,9 +1,7 @@
-# Check it out: http://humanstxt.org/
+/* TEAM */
 
-# TEAM
+    haibao.com
 
-    <name> -- <role> -- <twitter>
+/* THANKS */
 
-# THANKS
-
-    <name>
+    haibao's everyone

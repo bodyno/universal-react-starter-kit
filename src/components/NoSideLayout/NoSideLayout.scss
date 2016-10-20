@@ -1,0 +1,30 @@
+.no-side {
+
+  .ant-title {
+    padding-left: 0;
+    position: relative;
+    top: 6px;
+  }
+  .header-down {
+    margin-right: 10px;
+  }
+
+  .header {
+    border-bottom: 1px solid #f2f2f2;
+
+    .user-con {
+      margin-top: 22px;
+      float: right;
+    }
+    .header-left {
+      margin-bottom: 30px;
+    }
+  }
+
+  .footer {
+    text-align: center;
+    font-size: 12px;
+    color: #535353;
+    padding-bottom: 50px;
+  }
+}

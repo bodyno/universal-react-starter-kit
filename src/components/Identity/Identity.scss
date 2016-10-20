@@ -1,0 +1,77 @@
+.role{
+  height: 100px;
+  background-color: #f4f4f4;
+  padding: 0 292px;
+
+  .role-itme{
+    padding-top: 2px;
+    width: 70px;
+    float: left;
+    margin-right: 100px;
+    cursor: pointer;
+
+    div{
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 70px;
+      height: 70px;
+    }
+    p{
+      font-size: 14px;
+      padding-bottom: 4px;
+      text-align: center;
+    }
+    &.active{
+      p{
+        color: #00b9fb;
+        border-bottom: 2px solid #00b9fb;
+      }
+    }
+    .teacher{
+      background-image: url('./assets/icon_lt_default.png');
+
+    }
+    &.active{
+      .teacher{
+        background-image: url('./assets/icon_lt_active.png');
+      }
+    }
+    .media{
+      background-image: url('./assets/icon_m_default.png');
+    }
+    &.active{
+      .media{
+        background-image: url('./assets/icon_m_active.png');
+      }
+    }
+    .organization{
+      background-image: url('./assets/icon_o_default.png');
+    }
+    &.active{
+      .organization{
+        background-image: url('./assets/icon_o_active.png');
+      }
+    }
+  }
+  .role-itme:nth-child(3){
+    margin-right: 0;
+  }
+}
+
+.aggree-identity {
+  .role {
+    background: #fff;
+    padding: 0;
+    padding-left: 95px;
+    margin-bottom: 15px;
+
+    .role-itme {
+      width: 65px;
+      margin-right: 56px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

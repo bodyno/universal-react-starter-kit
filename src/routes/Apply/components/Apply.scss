@@ -1,0 +1,39 @@
+.apply-con{
+  width: 1000px;
+  margin: 20px auto;
+}
+.apply-wrap{
+  width: 1000px;
+  margin: 20px auto;
+  border: 1px solid #e7e7ec;
+}
+
+.apply-form{
+  padding-top: 30px;
+
+  .itme{
+    padding-bottom: 15px;
+    line-height: 40px;
+
+    .help-text{
+      color: #7c7c7c;
+      font-size: 12px;
+    }
+
+    .name{
+      float: left;
+      text-align: right;
+      width: 200px;
+
+      span{
+        color: #ff4e53;
+        vertical-align: middle;
+        font-size: 16px;
+        padding: 0 3px;
+      }
+    }
+    .ele{
+      margin-left: 210px;
+    }
+  }
+}
