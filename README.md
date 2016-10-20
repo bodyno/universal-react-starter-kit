@@ -19,7 +19,7 @@
 * [react-router-redux](https://github.com/rackt/react-router-redux)
 * [webpack](https://github.com/webpack/webpack)
 * [babel](https://github.com/babel/babel)
-* [express](https://github.com/expressjs/express)
+* [koa](https://github.com/koajs/koa)
 * [karma](https://github.com/karma-runner/karma)
 * [eslint](http://eslint.org)
 
@@ -71,7 +71,7 @@ $ npm start                     # Compile and launch
 ├── build                    # 所有打包配置项
 │   └── webpack              # webpack的指定环境配置文件
 ├── config                   # 项目配置文件
-├── server                   # Express 程序 (使用 webpack 中间件)
+├── server                   # Koa 程序 (使用 webpack 中间件)
 │   └── main.js              # 服务端程序入口文件
 ├── src                      # 程序源文件
 │   ├── main.js              # 程序启动和渲染
