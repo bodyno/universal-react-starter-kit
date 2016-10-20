@@ -74,58 +74,9 @@ webpackConfig.module.loaders = [{
 // css-loader not to duplicate minimization.
 const BASE_CSS_LOADER = 'css?sourceMap&-minimize'
 
-// Add any packge names here whose styles need to be treated as CSS modules.
-// These paths will be combined into a single regex.
-const PATHS_TO_TREAT_AS_CSS_MODULES = [
-  // 'react-toolbox', (example)
-]
-
-// If config has CSS modules enabled, treat this project's styles as CSS modules.
-if (config.compiler_css_modules) {
-  PATHS_TO_TREAT_AS_CSS_MODULES.push(
-    paths.src().replace(/[\^\$\.\*\+\-\?\=\!\:\|\\\/\(\)\[\]\{\}\,]/g, '\\$&') // eslint-disable-line
-  )
-}
-
-const isUsingCSSModules = false
-const cssModulesRegex = new RegExp(`(${PATHS_TO_TREAT_AS_CSS_MODULES.join('|')})`)
-
-// Loaders for styles that need to be treated as CSS modules.
-if (isUsingCSSModules) {
-  const cssModulesLoader = [
-    BASE_CSS_LOADER,
-    'modules',
-    'importLoaders=1',
-    'localIdentName=[name]__[local]___[hash:base64:5]'
-  ].join('&')
-
-  webpackConfig.module.loaders.push({
-    test: /\.scss$/,
-    include: cssModulesRegex,
-    loaders: [
-      'simple-universal-style',
-      cssModulesLoader,
-      'postcss',
-      'sass?sourceMap'
-    ]
-  })
-
-  webpackConfig.module.loaders.push({
-    test: /\.css$/,
-    include: cssModulesRegex,
-    loaders: [
-      'simple-universal-style',
-      cssModulesLoader,
-      'postcss'
-    ]
-  })
-}
-
-// Loaders for files that should not be treated as CSS modules.
-const excludeCSSModules = isUsingCSSModules ? cssModulesRegex : false
 webpackConfig.module.loaders.push({
   test: /\.scss$/,
-  exclude: excludeCSSModules,
+  exclude: false,
   loaders: [
     'simple-universal-style',
     BASE_CSS_LOADER,
@@ -135,7 +86,7 @@ webpackConfig.module.loaders.push({
 })
 webpackConfig.module.loaders.push({
   test: /\.css$/,
-  exclude: excludeCSSModules,
+  exclude: false,
   loaders: [
     'simple-universal-style',
     BASE_CSS_LOADER,
